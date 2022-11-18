@@ -1,0 +1,28 @@
+export const ejemplo = {
+	coord: { lon: -68.8272, lat: -32.8908 },
+	weather: [{ id: 802, main: "Clouds", description: "scattered clouds", icon: "03d" }],
+	base: "stations",
+	main: {
+		temp: 90.93,
+		feels_like: 88.36,
+		temp_min: 90.93,
+		temp_max: 90.93,
+		pressure: 1009,
+		humidity: 27,
+	},
+	visibility: 10000,
+	wind: { speed: 10.36, deg: 110 },
+	clouds: { all: 40 },
+	dt: 1668717966,
+	sys: {
+		type: 1,
+		id: 8238,
+		country: "AR",
+		sunrise: 1668677077,
+		sunset: 1668726973,
+	},
+	timezone: -10800,
+	id: 3844421,
+	name: "Madrid",
+	cod: 200,
+};
