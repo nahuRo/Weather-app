@@ -7,7 +7,7 @@ const ContainerWeather = ({ weather, city }) => {
 				<Card cityToFound={city} time={weather} png={weather.weather[0].icon} />
 			) : (
 				<div className="flex items-center justify-center h-full">
-					<h1 className="text-5xl font-bold">Sin busquedas</h1>
+					<h1 className="text-2xl sm:text-6xl font-bold">Sin busquedas</h1>
 				</div>
 			)}
 		</>

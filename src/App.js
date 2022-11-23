@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { getWeather } from "./services/fetchAPI";
 import Search from "./components/Search";
 import ContainerWeather from "./components/ContainerWeather";
-import { getWeather } from "./fetchAPI";
+
+// import { ejemplo } from "./weather";
 
 function App() {
 	const [weather, setWeather] = useState(null);
@@ -9,6 +11,7 @@ function App() {
 
 	useEffect(() => {
 		if (search !== "") {
+			// setWeather(ejemplo);
 			getWeather(search).then((resp) => {
 				setWeather(resp);
 			});
@@ -17,9 +20,8 @@ function App() {
 
 	return (
 		<div className="bg-cyan-500 h-screen flex flex-col justify-center items-center">
-			{/* md, actua desde pantalla full a 768px */}
-			<div className="bg-cyan-100 md:w-3/6 md:h-3/6 w-11/12 h-5/6 rounded-2xl ">
-				<div className="mt-8">
+			<div className="bg-cyan-100 w-11/12 md:w-4/5 lg:w-3/5 h-3/4 rounded-2xl p-3">
+				<div className="h-1/6 flex items-center justify-around">
 					<Search setSearch={setSearch} />
 				</div>
 				<div className="h-5/6">

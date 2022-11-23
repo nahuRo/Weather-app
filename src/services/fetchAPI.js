@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_KEY = "f6da0e754d501b81d015ef728e39cf2d";
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 export const getWeather = async (city) => {
 	const { data } = await axios.get(
